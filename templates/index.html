@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>{% block title %} Welcome to Flask Bookmark App {% endblock %}</h1>
+	{% for bookmark in bookmarks %}
+		<a href="{{ bookmark['url'] }}">
+			<h2>{{ bookmark['title'] }}</h2>
+		</a>
+		<p class="text-md-right">{{ bookmark['description'] }}</p>
+		<span class="badge badge-primary">{{ bookmark['date_created'] }}</span>
+		<hr>
+	{% endfor %}
+{% endblock %}

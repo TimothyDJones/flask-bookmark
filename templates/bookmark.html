@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>{% block title %} {{ bookmark['title'] }} {% endblock %}</h1>
+	<a href="{{ bookmark['url'] }}">
+		<h2>{{ bookmark['title'] }}</h2>
+	</a>
+	<p class="text-md-right">{{ bookmark['description'] }}</p>
+	<span class="badge badge-primary">{{ bookmark['date_created'] }}</span>
+{% endblock %}

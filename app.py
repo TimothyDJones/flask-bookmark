@@ -40,9 +40,9 @@ def create():
 		description = request.form['description']
 
 		if not url:
-			flash_message('URL is required!')
+			flash('URL is required!')
 		elif  not title:
-			flash_message('Title is required!')
+			flash('Title is required!')
 		else:
 			conn = get_db_connection()
 			conn.execute('INSERT INTO bookmarks (url, title, description) VALUES (?, ?, ?)',

@@ -7,7 +7,7 @@
 			<h2>{{ bookmark['title'] }}</h2>
 		</a>
 		<p class="text-md-right">{{ bookmark['description'] }}</p>
-		<span class="badge badge-primary">{{ bookmark['date_created'] }}</span>
+		<a href="{{ url_for('bookmark', bookmark_id=bookmark['id']) }}"><span class="badge badge-primary">{{ bookmark['date_created'] }}</span></a>
 		<hr>
 	{% endfor %}
 {% endblock %}
